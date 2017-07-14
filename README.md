@@ -15,3 +15,9 @@ this is the github repo for absolute task
     
     d. ./run_flask.sh
 6. curl http://127.0.0.1:5000
+
+7. use ansible playbook to install dependency packages 
+    a. cd ansible
+    
+    b. ansible-playbook flask_installation.yml --ask-pass
+
