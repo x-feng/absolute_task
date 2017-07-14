@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  remote_user: root
+  
+  tasks:
+    - name: "Install python and nginx packages {{ item }}"
+      apt:
+        name: "{{ item }}"
+      with_items:
+        - python
+        - python-pip		
+    - name: "Install flask"
+      shell: pip install flask
+      args:
+        executable: /bin/bash
